@@ -129,16 +129,16 @@ public class RDF2GoOREQueryHandler extends AbstractRDF2GoQueryHandler {
 		
 		String userURI = occ.getIdentityProvider().obtainUserURI();
 		// @formatter:off
-		String queryString = "select distinct ?g ?creator ?date ?t ?v ?priv"
+		String queryString = "select distinct ?g ?a ?m ?t ?v ?priv"
 				+ (includeAbstract ? "?ab" : "")
 				+ " where {"
 				+ "   graph ?g {?g a <" + ORE_RESOURCEMAP_CLASS + "> ."
 				+ escapedURL + " " + predicate + " ?v ."
 				+        filter
 				+ "   } ."
-				+   "OPTIONAL {?g <http://purl.org/dc/elements/1.1/creator> ?creator} ."
-				+   "OPTIONAL {?g <http://purl.org/dc/terms/modified> ?date} ."
-				+   "OPTIONAL {?g <http://purl.org/dc/elements/1.1/title> ?title} ."
+						+ " OPTIONAL {?g <http://purl.org/dc/elements/1.1/creator> ?a}."
+						+ " OPTIONAL {?g <http://purl.org/dc/terms/modified> ?m}."
+						+ " OPTIONAL {?g <http://purl.org/dc/elements/1.1/title> ?t}."
 				+   (includeAbstract ? "OPTIONAL {?g <http://purl.org/dc/terms/abstract> ?ab}." : "") 
 				+ " OPTIONAL {?g <" + LORESTORE_PRIVATE + "> ?priv}."
 				+ " OPTIONAL {?g <" + LORESTORE_USER + "> ?user}."
