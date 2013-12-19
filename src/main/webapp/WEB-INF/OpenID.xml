@@ -22,7 +22,7 @@
                 </bean>
                 <bean class="au.edu.diasb.springsecurity.ExternalProviderConfiguration">
                     <property name="domain" value="openid:yahoo"/>
-                    <property name="defaultAuthorities" value="ROLE_USER" />
+                    <property name="defaultAuthorities" value="ROLE_USER, ROLE_ORE" />
                     <property name="providerRegex" 
                         value="https://me.yahoo.com/.+" />
                     <property name="preferredUserNameAttributes" 

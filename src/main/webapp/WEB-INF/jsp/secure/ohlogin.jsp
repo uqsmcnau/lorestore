@@ -24,10 +24,6 @@
       onclick='setOpenIDUrl("https://www.google.com/accounts/o8/id")'/>
  <img style='vertical-align: middle' src='${images}/yahoo.png' alt='use Yahoo'
       onclick='setOpenIDUrl("https://www.yahoo.com")'/>
- <img style='vertical-align: middle' src='${images}/myspace.png' alt='use MySpace'
-      onclick='setOpenIDUrl("https://www.myspace.com")'/>
- <img style='vertical-align: middle' src='${images}/flickr.png' alt='use Flickr'
-      onclick='setOpenIDUrl("https://www.flickr.com")'/>
  <table>
     <tr><td>OpenID URL:</td><td><input id='openid-url' type='text' name='openid_identifier' size='40'/></td></tr>
     <tr><td><input type='checkbox' name='_spring_security_remember_me'></td>
